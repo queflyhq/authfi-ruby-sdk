@@ -1,0 +1,11 @@
+Gem::Specification.new do |s|
+  s.name        = 'authfi'
+  s.version     = '0.1.0'
+  s.summary     = 'AuthFI Ruby SDK'
+  s.description = 'JWT validation, RBAC middleware, permission auto-sync for AuthFI'
+  s.authors     = ['Quefly']
+  s.homepage    = 'https://github.com/queflyhq/authfi-ruby-sdk'
+  s.license     = 'MIT'
+  s.files       = ['authfi.rb']
+  s.required_ruby_version = '>= 3.0'
+end
