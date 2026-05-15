@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.description = 'JWT validation, RBAC middleware, permission auto-sync for AuthFI'
   s.authors     = ['Quefly']
   s.homepage    = 'https://github.com/queflyhq/authfi-ruby-sdk'
-  s.license     = 'MIT'
+  s.license     = 'Apache-2.0'
   s.files       = ['authfi.rb']
   s.required_ruby_version = '>= 3.0'
 end
