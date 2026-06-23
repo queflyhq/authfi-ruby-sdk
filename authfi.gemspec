@@ -8,4 +8,8 @@ Gem::Specification.new do |s|
   s.license     = 'Apache-2.0'
   s.files       = ['authfi.rb']
   s.required_ruby_version = '>= 3.0'
+
+  # Battle-tested JWT implementation — handles RS256 signature
+  # verification and JWKS. We do NOT hand-roll crypto.
+  s.add_dependency 'jwt', '~> 2.7'
 end
