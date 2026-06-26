@@ -1,6 +1,6 @@
 # AuthFI Ruby SDK
 
-Official Ruby SDK for [AuthFI](https://authfi.app) — the identity control plane.
+Official Ruby SDK for [AuthFI](https://authfi.io) — the identity control plane.
 
 ## Install
 

@@ -39,8 +39,8 @@ class AuthFI
 
   # jwks_ttl: how long (seconds) to trust a cached JWKS before refetching.
   # issuer:   override the expected token issuer (`iss` claim). Defaults to
-  #           the tenant's public host, e.g. https://acme.authfi.app.
-  def initialize(tenant:, api_key:, api_url: 'https://api.authfi.app',
+  #           the tenant's public host, e.g. https://acme.authfi.io.
+  def initialize(tenant:, api_key:, api_url: 'https://api.authfi.io',
                  application_id: nil, jwks_ttl: 300, issuer: nil)
     @tenant = tenant
     @api_key = api_key
@@ -172,7 +172,7 @@ class AuthFI
   # overrides both.
   def expected_issuers
     return [@issuer] if @issuer
-    ["https://#{@tenant}.authfi.app", auth_url]
+    ["https://#{@tenant}.authfi.io", auth_url]
   end
 
   # Returns a lambda compatible with the jwt gem's `jwks:` option.

@@ -42,7 +42,7 @@ module SigningHelper
       'roles'       => %w[admin editor],
       'permissions' => %w[read:users write:users],
       'org_slug'    => 'acme-corp',
-      'iss'         => 'https://acme.authfi.app',
+      'iss'         => 'https://acme.authfi.io',
       'iat'         => Time.now.to_i,
       'exp'         => Time.now.to_i + 3600
     }.merge(overrides)
