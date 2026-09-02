@@ -138,7 +138,9 @@ class AuthFI
     }
     body[:application_id] = @application_id if @application_id
 
-    uri = URI("#{@api_url}/manage/v1/#{@tenant}/permissions/sync")
+    # The edge dispatch is api.authfi.io/<slug>/<path> — slug FIRST — and no /manage/ prefix
+    # exists on the platform; those routes are /v1/* like the rest.
+    uri = URI("#{@api_url}/#{@tenant}/v1/permissions/sync")
     req = Net::HTTP::Put.new(uri)
     req['X-API-Key'] = @api_key
     req['Content-Type'] = 'application/json'
@@ -157,9 +159,9 @@ class AuthFI
   private
 
   # Tenant-scoped auth base, matching the other AuthFI SDKs:
-  #   {api_url}/v1/{tenant}
+  #   {api_url}/{tenant}/v1
   def auth_url
-    "#{@api_url}/v1/#{@tenant}"
+    "#{@api_url}/#{@tenant}/v1"
   end
 
   def jwks_url
